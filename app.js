@@ -22,7 +22,7 @@ mongoose
     `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.8e6yml0.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`
   )
   .then(() =>
-    app.listen(5000, () =>
+    app.listen(process.env.PORT, () =>
       console.log("Connected To Database And Server is running")
     )
   )
