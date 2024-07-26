@@ -19,7 +19,7 @@ app.use("/booking", bookingsRouter);
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.8e6yml0.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`
+    `${process.env.MONGODB_URL}/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`
   )
   .then(() =>
     app.listen(process.env.PORT, () =>
